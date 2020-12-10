@@ -1,5 +1,5 @@
 DIR=/mqtt_main/data
-FILE=$DIR/connector.py
+FILE=/mqtt_main/data/connector.py
 
 # echo "alias 'run'='sh /run.sh'" >> /etc/bash.bashrc 
 # source /etc/bash.bashrc 
@@ -14,7 +14,7 @@ if [ -f "$FILE" ]; then
     echo "$FILE exists."
     python $FILE
 else 
-    cp /etc/tmp/template.py $DIR/$FILE
+    cp /etc/tmp/template.py $FILE
     /bin/bash
 fi
 

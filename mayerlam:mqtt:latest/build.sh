@@ -1,1 +1,1 @@
-docker build -t mayerlam/mqtt:latest . 
+docker build -t mayerlam/mqtt4python:latest . 
