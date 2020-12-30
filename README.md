@@ -1,15 +1,23 @@
 # pymqtt-docker
-An mqtt kit for python run in docker.
+一個在python上運行mqtt的docker鏡像
 
-## Reference
-Before use that. You need to install docker in you system. You can clik [Docker](https://www.docker.com "Open")  to see All detail 
+## 依賴
+在使用之前。 你需要安裝`docker`在你的系統中. 你可以點擊[Docker](https://www.docker.com "Open") 獲取詳細資料
 
-## Install
-`sh ./build.sh`
+## 安裝
+下載所有的文件，然後在文件根目錄執行：
+```sh
+sh ./build.sh
+```
 
-## Usage
-`docker run --name mqtt -v {$YOUR_MOUNT_DIR}:/mqtt_main/data/ -itd mayerlam/mqtt`
+## 使用
 
-Then in your mount directory have create a file Connector.py. You can edit this file. Than run by:
+執行以下命令，並同時把你的主體目錄掛載到客體上。
+```sh
+docker run --name mqtt -v {$YOUR_MOUNT_DIR}:/mqtt_main/data/ -itd mayerlam/mqtt
+```
+然後在你掛載的目錄下，應該會創建了一個目錄`Connector.py`。在一開始裡面帶有進行mqtt連接的模板，你可以修改它，然後執行
 
-`docker exec -it mqtt sh run.sh `
+```sh
+docker exec -it mqtt sh run.sh
+```
