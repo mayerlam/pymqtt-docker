@@ -16,7 +16,7 @@ sh ./build.sh
 ```sh
 docker run --name mqtt -v {$YOUR_MOUNT_DIR}:/mqtt_main/data/ -itd mayerlam/mqtt
 ```
-然後在你掛載的目錄下，應該會創建了一個目錄`Connector.py`。在一開始裡面帶有進行mqtt連接的模板，你可以修改它，然後執行
+然後在你掛載的目錄下，應該會創建了一個文件`Connector.py`。在一開始裡面帶有進行mqtt連接的模板，你可以修改它，然後執行
 
 ```sh
 docker exec -it mqtt sh run.sh
